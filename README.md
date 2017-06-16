@@ -6,4 +6,5 @@
   4. Advanced_Spark
   5. Additional_Spark
   
-  
+ ## Manual to interact with Apache Spark
+    Manual_Spark_Quick_Start.pdf
