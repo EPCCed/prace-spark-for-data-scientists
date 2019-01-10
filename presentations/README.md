@@ -3,8 +3,8 @@
 ## Day 1
 
 9:30 Introduction & Welcome<br>
-9:40 Introduction to Spark<br>
-10:20 Spark Essentials<br>
+9:40 [Introduction to Spark](Spark_Introduction.pdf)<br>
+10:20 [Spark Essentials](Spark_Essentials.pdf)<br>
 11:00 Coffee/Tea<br>
 11:30 Practical: setup and walkthrough<br>
 12:30 Lunch<br>
