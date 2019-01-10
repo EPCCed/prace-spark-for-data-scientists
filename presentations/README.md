@@ -11,13 +11,13 @@
 13:30 Practical: setup and walkthrough<br>
 14:15 [Spark Cluster](Spark_Cluster.pdf)<br>
 15:00 Coffee/Tea<br>
-15:30 Practical: [lab exercises 1](../lab_exercises)<br>
+15:30 Practical: [lab exercises 1](../lab_exercises/lab1_basics.ipynb)<br>
 17:00 Close<br>
 
 ## Day 2
 
 9:30 [Spark Data Frames](Spark_DataFrames.pdf)<br>
-10:15 Practical: lab exercises 2<br>
+10:15 Practical: [lab exercises 2](../lab_exercises/lab2_1_dataframes.ipynb)<br>
 11:00 Coffee/Tea</br>
 11:30 Advanced Spark</br>
 12:30 Lunch</br>
