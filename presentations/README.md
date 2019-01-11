@@ -19,7 +19,7 @@
 9:30 [Spark Data Frames](Spark_DataFrames.pdf)<br>
 10:15 Practical: [lab exercises 2](../lab_exercises/lab2_1_dataframes.ipynb)<br>
 11:00 Coffee/Tea</br>
-11:30 Advanced Spark</br>
+11:30 [Advanced Spark](Spark_Advanced.pdf)</br>
 12:30 Lunch</br>
 13:30 Practical: lab exercises 3 or create your own Spark application</br>
 14:45 Present your application</br>
