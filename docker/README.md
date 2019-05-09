@@ -1,0 +1,27 @@
+# Dockerfile for Spark course
+
+Build:
+```
+docker build -t prace_spark_course
+```
+
+When the image has been built succesfully, run an interactive container:
+```
+./start_docker.sh
+```
+This starts a bash commandline session.
+
+From within the container, start PySpark with a Jupyter notebook:
+```
+./pyspark_jupyter.sh
+```
+
+```
+To access the notebook, open this file in a browser:
+    file:///home/sparkuser/.local/share/jupyter/runtime/nbserver-18-open.html
+Or copy and paste one of these URLs:
+    http://(3c00e31c38c9 or 127.0.0.1):8000/?token=66050ed7bdd317f6fef3631ecb72c4e1b2f805a7198c2ff9
+```
+
+Copy the token and open the URL in a browser:
+http://localhost:8000/?token=<PASTE THE TOKEN HERE>
