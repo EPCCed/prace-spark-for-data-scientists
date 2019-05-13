@@ -31,15 +31,15 @@ On Windows, especially if you do not have Java and Python, it is easier to use t
 ### Installation
 
 1. Clone the git repository on your laptop:
-```
-git clone https://github.com/EPCCed/prace-spark-for-data-scientists.git
-```
+      ```
+      git clone https://github.com/EPCCed/prace-spark-for-data-scientists.git
+      ```
 1. Change into the docker directory within the cloned repository and follow the [instructions](docker/) to build and run the Dockerfile.
-```
-cd prace-spark-for-data-scientists/docker
-docker build -t prace_spark_course
-./start_docker.sh
-```
+      ```
+      cd prace-spark-for-data-scientists/docker
+      docker build -t prace_spark_course
+      ./start_docker.sh
+      ```
 
 ## Install Spark on your system
 
@@ -83,21 +83,21 @@ SparkSession available as 'spark'.
 ### Examples and lab exercises
 
 1. Clone the git repository on your laptop:
-```
-git clone https://github.com/EPCCed/prace-spark-for-data-scientists.git
-```
-2. We're setting up an environment variable for the Spark installation directory
+      ```
+      git clone https://github.com/EPCCed/prace-spark-for-data-scientists.git
+      ```
+1. We're setting up an environment variable for the Spark installation directory
 (replace **[INSTALLATION_PATH]** below with the path of your installation):
 <pre>
 export SPARK_HOME=<b>[INSTALLATION_PATH]</b>/spark-2.4.0-bin-hadoop2.7/
 </pre>
-3. Configure the environment for PySpark to use Jupyter notebooks:
-```
-export PYSPARK_DRIVER_PYTHON=jupyter
-export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
-```
-4. Start PySpark with a Jupyter notebook server:
-```
-cd prace-spark-for-data-scientists
-$SPARK_HOME/bin/pyspark
-```
+1. Configure the environment for PySpark to use Jupyter notebooks:
+      ```
+      export PYSPARK_DRIVER_PYTHON=jupyter
+      export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+      ```
+1. Start PySpark with a Jupyter notebook server:
+      ```
+      cd prace-spark-for-data-scientists
+      $SPARK_HOME/bin/pyspark
+      ```
