@@ -24,5 +24,5 @@ Or copy and paste one of these URLs:
     http://(3c00e31c38c9 or 127.0.0.1):8000/?token=66050ed7bdd317f6fef3631ecb72c4e1b2f805a7198c2ff9
 ```
 
-Copy the token from above and open the URL in a browser:
-http://localhost:8000/?token=[PASTE_THE_TOKEN_HERE]
+Copy the token from your commandline and open the URL in a browser:
+http://localhost:8000/?token=[PASTE_YOUR_TOKEN_HERE]
