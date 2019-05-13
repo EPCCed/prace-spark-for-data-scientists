@@ -1,11 +1,55 @@
 # Running PySpark notebooks on your laptop
 
-## Prerequisites
+If you'd like to run Spark on your own laptop there are three options:
 
+1. Download and install Spark natively
+1. Use a VM (Oracle VirtualBox)
+1. Use a Docker container
+
+On Linux-based systems (including MacOS) installation is straightforward.
+On Windows, especially if you do not have Java and Python, it is easier to use the provided VM or Docker image.
+
+## Oracle VirtualBox VM
+
+### Prerequisites
+
+* Oracle VirtualBox (https://www.virtualbox.org)
+
+### Installation
+
+1. Download our VirtualBox VM image
+1. Start VirtualBox and click File -> Import Appliance ... to import the image
+1. Start the VM
+1. Password for the SparkUser is "sparkuser"
+
+## Docker image
+
+### Prerequisites
+
+* Docker
+
+### Installation
+
+1. Clone the git repository on your laptop:
+```
+git clone https://github.com/EPCCed/prace-spark-for-data-scientists.git
+```
+1. Change into the docker directory within the cloned repository and follow the [instructions](docker/) to build and run the Dockerfile.
+```
+cd prace-spark-for-data-scientists/docker
+docker build -t prace_spark_course
+./start_docker.sh
+```
+
+## Install Spark on your system
+
+### Prerequisites
+
+* Java 8+
 * Python 3
 * Recommended: Anaconda
 
-## Installation
+### Installation
 
 1. Get the latest release from the [Apache Spark downloads page](https://spark.apache.org/downloads.html) and unpack it.
 1. That's it - check that it works:
@@ -36,7 +80,7 @@ SparkSession available as 'spark'.
 >>> 
 ```
 
-## Examples and lab exercises
+### Examples and lab exercises
 
 1. Clone the git repository on your laptop:
 ```
