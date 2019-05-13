@@ -2,9 +2,9 @@
 
 If you'd like to run Spark on your own laptop there are three options:
 
-1. Download and install Spark natively
-1. Use a VM (Oracle VirtualBox)
-1. Use a Docker container
+1. [Download and install Spark natively](#install-spark-natively)
+1. [Use a VM (Oracle VirtualBox)](#oracle-virtualbox-vm)
+1. [Use a Docker container](#docker-image)
 
 On Linux-based systems (including MacOS) installation is straightforward.
 On Windows, especially if you do not have Java and Python, it is easier to use the provided VM or Docker image.
