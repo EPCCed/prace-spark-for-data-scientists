@@ -22,6 +22,19 @@ On Windows, especially if you do not have Java and Python, it is easier to use t
 1. Start the VM
 1. Password for the SparkUser is "sparkuser"
 
+### Examples and lab exercises
+
+A copy of the git repository is available in the VM.
+
+Start a PySpark session:
+
+```
+cd prace-spark-for-data-scientists
+PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS=notebook pyspark
+```
+
+This opens a PySpark Jupyter session in a Firefox browser.
+
 ## Docker image
 
 ### Prerequisites
@@ -40,6 +53,18 @@ On Windows, especially if you do not have Java and Python, it is easier to use t
       docker build -t prace_spark_course
       ./start_docker.sh
       ```
+
+###
+
+### Examples and lab exercises
+
+A copy of the git repository is available in the Docker container.
+
+In the Docker container start a PySpark session:
+
+```
+./pyspark_jupyter.sh
+```
 
 ## Install Spark on your system
 
