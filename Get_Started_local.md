@@ -22,7 +22,7 @@ On Windows, especially if you do not have Java and Python, it is easier to use t
 1. Get the latest release from the [Apache Spark downloads page](https://spark.apache.org/downloads.html) and unpack it.
 1. That's it - check that it works:
       ```
-      cd spark-2.4.0-bin-hadoop2.7/
+      cd spark-2.4.2-bin-hadoop2.7/
       bin/pyspark
       ```
 
@@ -40,7 +40,7 @@ On Windows, especially if you do not have Java and Python, it is easier to use t
             ____              __
            / __/__  ___ _____/ /__
           _\ \/ _ \/ _ `/ __/  '_/
-         /__ / .__/\_,_/_/ /_/\_\   version 2.4.0
+         /__ / .__/\_,_/_/ /_/\_\   version 2.4.2
             /_/
 
       Using Python version 3.6.3 (default, Oct  6 2017 12:04:38)
@@ -57,7 +57,7 @@ On Windows, especially if you do not have Java and Python, it is easier to use t
 1. We're setting up an environment variable for the Spark installation directory
 (replace **[INSTALLATION_PATH]** below with the path of your installation):
       ```
-      export SPARK_HOME=<b>[INSTALLATION_PATH]</b>/spark-2.4.0-bin-hadoop2.7/
+      export SPARK_HOME=<b>[INSTALLATION_PATH]</b>/spark-2.4.2-bin-hadoop2.7/
       ```
 1. Configure the environment for PySpark to use Jupyter notebooks:
       ```
