@@ -9,64 +9,7 @@ If you'd like to run Spark on your own laptop there are three options:
 On Linux-based systems (including MacOS) installation is straightforward.
 On Windows, especially if you do not have Java and Python, it is easier to use the provided VM or Docker image.
 
-## Oracle VirtualBox VM
-
-### Prerequisites
-
-* Oracle VirtualBox (https://www.virtualbox.org)
-
-### Installation
-
-1. Download our VirtualBox VM image
-1. Start VirtualBox and click File -> Import Appliance ... to import the image
-1. Start the VM
-1. Password for the SparkUser is "sparkuser"
-
-### Examples and lab exercises
-
-A copy of the git repository is available in the VM.
-
-Start a PySpark session:
-
-```
-cd prace-spark-for-data-scientists
-PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS=notebook pyspark
-```
-
-This opens a PySpark Jupyter session in a Firefox browser.
-
-## Docker image
-
-### Prerequisites
-
-* Docker
-
-### Installation
-
-1. Clone the git repository on your laptop:
-      ```
-      git clone https://github.com/EPCCed/prace-spark-for-data-scientists.git
-      ```
-1. Change into the docker directory within the cloned repository and follow the [instructions](docker/) to build and run the Dockerfile.
-      ```
-      cd prace-spark-for-data-scientists/docker
-      docker build -t prace_spark_course
-      ./start_docker.sh
-      ```
-
-###
-
-### Examples and lab exercises
-
-A copy of the git repository is available in the Docker container.
-
-In the Docker container start a PySpark session:
-
-```
-./pyspark_jupyter.sh
-```
-
-## Install Spark on your system
+## Install Spark natively
 
 ### Prerequisites
 
@@ -126,3 +69,58 @@ In the Docker container start a PySpark session:
       cd prace-spark-for-data-scientists
       $SPARK_HOME/bin/pyspark
       ```
+
+## Oracle VirtualBox VM
+
+### Prerequisites
+
+* Oracle VirtualBox (https://www.virtualbox.org)
+
+### Installation
+
+1. Download our VirtualBox VM image
+1. Start VirtualBox and click File -> Import Appliance ... to import the image
+1. Start the VM
+1. Password for the SparkUser is "sparkuser"
+
+### Examples and lab exercises
+
+A copy of the git repository is available in the VM.
+
+Start a PySpark session:
+
+```
+cd prace-spark-for-data-scientists
+PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS=notebook pyspark
+```
+
+This opens a PySpark Jupyter session in a Firefox browser.
+
+## Docker image
+
+### Prerequisites
+
+* Docker
+
+### Installation
+
+1. Clone the git repository on your laptop:
+      ```
+      git clone https://github.com/EPCCed/prace-spark-for-data-scientists.git
+      ```
+1. Change into the docker directory within the cloned repository and follow the [instructions](docker/) to build and run the Dockerfile.
+      ```
+      cd prace-spark-for-data-scientists/docker
+      docker build -t prace_spark_course
+      ./start_docker.sh
+      ```
+
+### Examples and lab exercises
+
+A copy of the git repository is available in the Docker container.
+
+In the Docker container start a PySpark session:
+
+```
+./pyspark_jupyter.sh
+```
