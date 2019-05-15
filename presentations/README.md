@@ -11,4 +11,5 @@
 | 17:00 | [Spark Cluster](Spark_Cluster.pdf) |
 | 17:20 | [Spark Data Frames](Spark_DataFrames.pdf) |
 | 17:30 | [lab exercises 1](../lab_exercises/lab1_basics.ipynb) |
-| 18:20 | Wrapup & close |
+| 18:10 | Wrapup & close |
+| 18:20 | Shuttle bus |
