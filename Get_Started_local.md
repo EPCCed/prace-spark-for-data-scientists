@@ -78,7 +78,7 @@ On Windows, especially if you do not have Java and Python, it is easier to use t
 
 ### Installation
 
-1. Download our VirtualBox VM image
+1. Download the VirtualBox VM image from [here](https://drive.google.com/open?id=1OHlNE8GAF8io2BMfRjAWQlZBogRil7JQ).
 1. Start VirtualBox and click File -> Import Appliance ... to import the image
 1. Start the VM
 1. Password for the SparkUser is "sparkuser"
