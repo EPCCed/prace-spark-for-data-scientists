@@ -2,7 +2,7 @@
 
 Build:
 ```
-docker build -t prace_spark_course
+docker build -t prace_spark_course .
 ```
 
 When the image has been built succesfully, run an interactive container:
