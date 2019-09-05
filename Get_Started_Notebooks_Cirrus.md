@@ -66,7 +66,7 @@ But first we need to do some steps for:
     which is configured to use all available CPUs.
     
     ```
-    [USERNAME@r1i1n20 ~]$ source./start_spark.sh 
+    [USERNAME@r1i1n20 ~]$ source ./start_spark.sh 
     1 node(s) assigned
     Autoloading gcc/6.2.0
     starting org.apache.spark.deploy.master.Master, logging to /lustre/home/y15/USERNAME/spark-2.4.0-bin-hadoop2.7/logs/spark-USERNAME-org.apache.spark.deploy.master.Master-1-r1i1n20.out
