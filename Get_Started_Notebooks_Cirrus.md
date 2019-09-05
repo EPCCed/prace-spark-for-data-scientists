@@ -20,7 +20,7 @@ But first we need to do some steps for:
 2. Copy the spark source and the other necessaries scripts into your `$HOME` directory:
     ```
     cp /lustre/home/shared/y15/spark/spark-2.4.0-bin-hadoop2.7.tar $HOME/.
-    cp/lustre/home/shared/y15/spark/start_interactive.sh $HOME/.
+    cp /lustre/home/shared/y15/spark/start_interactive.sh $HOME/.
     cp /lustre/home/shared/y15/spark/start_spark.sh  $HOME/.
     cp /lustre/home/shared/y15/spark/stop_spark.sh $HOME/.
     ```
@@ -32,7 +32,7 @@ But first we need to do some steps for:
     
 4.	Clone the repository in your `$HOME`:
     ```
-    git clone  https://github.com/EPCCed/prace-spark-for-data-scientists.git
+    git clone https://github.com/EPCCed/prace-spark-for-data-scientists.git
     ```
 
 ## Starting an interactive session:
@@ -54,7 +54,7 @@ But first we need to do some steps for:
    ```
    You will need the name of the node assigned in the step 8.
 
-   Note: `qstat -u USERNAME` gives you the number of nodes and cores allocated. 
+**Note:** On the login node, the command `qstat -u $USER` gives you the number of nodes and cores allocated for your interactive job.
 
 
 ## Starting a Spark cluster: 
