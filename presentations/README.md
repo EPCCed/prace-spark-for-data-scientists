@@ -10,7 +10,7 @@
 | 10:30 | [Spark Data Frames](Spark_DataFrames.pdf) |
 | 10:45 | [lab exercises 1](../lab_exercises/lab1_basics.ipynb) |
 | 11:30 | [Spark Cluster](Spark_Cluster.pdf) |
-| 11:45 | [Advanced Sparkr](Spark_Advanced.pdf) |
+| 11:45 | [Advanced Spark](Spark_Advanced.pdf) |
 | 12:00 | Lunch |
 | 13:00 | [lab exercises 2](../lab_exercises/lab2_1_dataframes.ipynb)  |
 | 13:55 | Wrapup & Questions |
