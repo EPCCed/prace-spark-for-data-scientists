@@ -77,21 +77,22 @@ But first we need to do some steps for:
     starting org.apache.spark.deploy.history.HistoryServer, logging to /lustre/home/y15/USERNAME/spark-2.4.0-bin-hadoop2.7/logs/spark-USERNAME-org.apache.spark.deploy.history.HistoryServer-1-r1i1n20.out
     ```
 
-    > **Note 1:** We can also configure the number of worker instances launched by each worker and
-    > the number of CPUs bound to each worker.
-    > This is done by passing arguments to the `setup_spark_env.py` script called from within `start_spark.sh`,
-    > see below for the actual command.
-    ```
-    python $SPARK_CONF_DIR/setup_spark_env.py "SPARK_WORKER_INSTANCES=10" "SPARK_WORKER_CORES=2"
-    ```
-    > **Note 2:** To shutdown spark and close the interactive session, simply run “./stop_spark.sh” followed by “exit”.
-    ```
-    [USERNAME@r1i1n20 ~]$./stop_spark.sh
-    stopping org.apache.spark.deploy.master.Master
-    stopping org.apache.spark.deploy.history.HistoryServer
-    r1i1n20: stopping org.apache.spark.deploy.worker.Worker 
-    [USERNAME@r1i1n20 ~]$ exit
-    ```
+**Note 1:** We can also configure the number of worker instances launched by each worker and
+the number of CPUs bound to each worker.
+This is done by passing arguments to the `setup_spark_env.py` script called from within `start_spark.sh`,
+see below for the actual command.
+```
+python $SPARK_CONF_DIR/setup_spark_env.py "SPARK_WORKER_INSTANCES=10" "SPARK_WORKER_CORES=2"
+```
+
+**Note 2:** To shutdown spark and close the interactive session, simply run “./stop_spark.sh” followed by “exit”.
+```
+[USERNAME@r1i1n20 ~]$./stop_spark.sh
+stopping org.apache.spark.deploy.master.Master
+stopping org.apache.spark.deploy.history.HistoryServer
+r1i1n20: stopping org.apache.spark.deploy.worker.Worker 
+[USERNAME@r1i1n20 ~]$ exit
+```
 ## Starting a Jupyter session connected with Pyspark: 
 7. Go to [walkthrough_examples/](walkthrough_examples/) and start the jupyter server:  
    1. Modify the script `start_Jupyter_local.sh` with your MASTER node 
