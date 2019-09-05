@@ -102,6 +102,7 @@ But first we need to do some steps for:
       ```
       This will give you a token, which will be used in step 8, 
       like this one: http://0.0.0.0:8888/?token=2d5e554b2397355c334b8c3367503b06c4f6f95a26151795  
+
 8. Open another terminal and type the following command but replacing USER by your username on Cirrus, 
    and MASTER NODE by the node that has been assigned to you in the interactive session. 
    ```
@@ -110,6 +111,7 @@ But first we need to do some steps for:
    In a web browser open http://localhost:8888/ -
    this will start a Jupyter session, where you will have to type the token 
    (only the first time) given to you in the step 7. 
+   ![Starting Jupyter](Spark_Applications/start_Jupyter.png)
 
 ## Monitoring Spark
 
@@ -127,7 +129,8 @@ But first we need to do some steps for:
     ### Example 1:
     Using the default values in both the scripts:
     **the master and a worker process** are located in the **same node** 
-    and the worker process is configured with 72 cores. 
+    and the worker process is configured with 72 cores.
+    ![Example 1](Spark_Applications/WebUI-Example1.png)
 
     ### Example 2:
     We have asked for one node (in start_interactive), but we have configured the spark cluster 
@@ -135,11 +138,13 @@ But first we need to do some steps for:
     ```
     python $SPARK_CONF_DIR/setup_spark_env.py "SPARK_WORKER_INSTANCES=10" "SPARK_WORKER_CORES=2"
     ```
+    ![Example 2](Spark_Applications/WebUI-Example2.png)
     
     ### Example 3:
     We have asked for two nodes (in start_interactive), 
     but we have configured the spark cluster (start_spark) to have a worker per node, 
     using all cores available per worker (72).
+    ![Example 3](Spark_Applications/WebUI-Example3.png)
     
 10. Every SparkContext launches a web UI (Spark driver’s web UI), by default on port 4040, 
     that displays useful information (jobs, stages, storage for RDD persistence, broadcasts, accumulators) 
