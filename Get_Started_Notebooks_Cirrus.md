@@ -155,3 +155,10 @@ But first we need to do some steps for:
     The Spark driver's web UI purpose is to show the progress of your computations, 
     while the standalone Master's web UI is to let you know the current state of your 
     "operating environment" (aka the setup and status of the Spark standalone cluster).
+    
+
+**Note:** You can use a single command to tunnel all the ports for the Spark UI
+```
+ssh -L8888: MASTER NODE:8888 -L8080: MASTER NODE:8080 -L4040: MASTER NODE:4040 USER@login.cirrus.ac.uk
+```
+
