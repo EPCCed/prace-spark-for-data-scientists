@@ -12,4 +12,6 @@
 | 11:30 | [Spark Cluster](Spark_Cluster.pdf) |
 | 12:00 | Lunch |
 | 13:00 | [lab exercises 2](../lab_exercises/lab2_basics.ipynb) continued |
-| 13:50 | Wrapup & close |
+| 13:55 | Wrapup & Questions |
+| 14:00 | Coffee Break |
+
