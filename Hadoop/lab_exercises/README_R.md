@@ -127,6 +127,12 @@ Each book will therefore be stored in a single data block.
 Follow the instructions in [Setup Hadoop on Cirrus](../Setup-Hadoop-Cirrus.md) to start an interactive job
 on Cirrus and configure and start your own Hadoop cluster for this exercise.
 
+Set the following environment variables:
+```
+export HADOOP_DIR=$HOME/hadoop
+export HADOOP_HOME=$HADOOP_DIR/hadoop-3.2.0
+export HADOOP_CONF_DIR=$HADOOP_DIR/conf_dir
+```
 
 ## Hadoop distributed file system (HDFS)
 
@@ -134,11 +140,11 @@ Before we can process any data in Hadoop we must first upload the data to HDFS. 
 
 To copy the book data files from the local filesystem to HDFS run:
 
-    hadoop fs -copyFromLocal data/pg*.txt .
+    $HADOOP_HOME/bin/hadoop fs -copyFromLocal data/pg*.txt .
 
 After copying you can now list the files in your Hadoop file system:
 
-    hadoop fs -ls
+    $HADOOP_HOME/bin/hadoop fs -ls
 
 You will see something like:
 
@@ -153,7 +159,7 @@ This is very similar to what you would see on a Unix filesystem but notice the n
 
 Finally, we can now run the job on Hadoop.  Run the following command on a single line:
 
-    hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.4.jar
+    $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar
       -files src/map.R,src/reduce.R
       -input pg*.txt -output wordCountResult 
       -mapper map.R -reducer reduce.R
@@ -199,7 +205,7 @@ Often you will wish to have more than one reducer so the reducer work can be dis
 
 Run the following command (on a single line) to execute the job with two reducers:
 
-    hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.4.jar
+    $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar
       -files src/map.R,src/reduce.R
       -input pg*.txt -output wordCountTwoReducers 
       -mapper map.R -reducer reduce.R
@@ -251,7 +257,7 @@ Fix the reducer so that the result for 'far' is 2, while at the same time ensuri
 
 When this works we can now run the job on Hadoop using the combiner.  Run:
 
-     hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.4.jar
+     $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar
         -files src/map.R,src/reduce.R
         -input pg*.txt -output wordCountWithCombiner 
         -mapper map.R -reducer reduce.R -combiner reduce.R
