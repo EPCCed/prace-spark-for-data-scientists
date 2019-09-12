@@ -28,6 +28,11 @@ We will use the Star Wars text for very simple testing and will run the full job
 You must ensure that the full path to the directory you use for this practical does NOT include any spaces.  
 Hadoop does not like files in directories with spaces and will produce errors.
 
+Load the module to use the Anaconda distribution of Python 3 on Cirrus:
+```
+module load anaconda/python3
+```
+
 ## Hadoop streaming
 
 For this tutorial we will use Hadoop streaming. 
