@@ -107,8 +107,6 @@ You can test the whole map/reduce pipeline by running:
     cat data/StarWars.txt | src/map.py | sort | src/reduce.py
 
 Has the output successfully counted the occurrences of each word?
-
-When you get this far please stick a third post-it note to your screen.
  
 ## Testing on a sample of the book data
 
@@ -227,9 +225,6 @@ Or you can copy the file back to the local filesystem with:
     hadoop fs -copyToLocal wordCountResult/part-00000 wordCountResult.data
 
 
-When you get this far please stick a fourth post-it note to your screen.
-
-
 ## Specifying more than one reducer
 
 Often you will wish to have more than one reducer so the reducer work can be distributed over Hadoop's nodes. The number of reducers to use is easily specified when using Hadoop streaming by the `-numReduceTasks` flag. 
@@ -261,8 +256,6 @@ The result data is now split into two parts.  If you look at the data you will s
 words and span the whole range of the alphabet. To produce the same output as we got from a single reducer these two output files would have to be merged together. For many large files this could be a time consuming exercise.
 
 To create part files that can simply be concatenated together to produce the same sorted output as was produced with one reducer you will need to use a special partitioner called `TotalOrderPartitioner`. This partitioner requires that the user specify details of how the data should be partitioned over the reducers and is bit complicated to set up. It is outside the scope of this practical, but it is good to know that it can be done.
-
-When you get this far please stick a fifth post-it note to your screen.
 
 ## Adding a combiner
 
@@ -305,7 +298,6 @@ You should see in the report that the combiner has significantly reduced the num
     Reduce input records=24804
     Reduce output records=12939
 
-When you get this far please stick a sixth post-it note to your screen.
 
 ## Optional extras
 
