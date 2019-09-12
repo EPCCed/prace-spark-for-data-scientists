@@ -150,6 +150,13 @@ Each book will therefore be stored in a single data block.
 Follow the instructions in [Setup Hadoop on Cirrus](../Setup-Hadoop-Cirrus.md) to start an interactive job
 on Cirrus and configure and start your own Hadoop cluster for this exercise.
 
+Set the following environment variables:
+```
+export HADOOP_DIR=$HOME/hadoop
+export HADOOP_HOME=$HADOOP_DIR/hadoop-3.2.0
+export HADOOP_CONF_DIR=$HADOOP_DIR/conf_dir
+```
+
 
 ## Hadoop distributed file system (HDFS)
 
@@ -180,7 +187,7 @@ This is the replication index for the file it tells you how many copies of the f
 
 Finally, we can now run the job on Hadoop.  Run the following command on a single line:
 
-    hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.4.jar
+    $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar
       -files src/map.py,src/reduce.py
       -input pg*.txt -output wordCountResult 
       -mapper map.py -reducer reduce.py
@@ -231,7 +238,7 @@ Often you will wish to have more than one reducer so the reducer work can be dis
 
 Run the following command (on a single line) to execute the job with two reducers:
 
-    hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.4.jar
+    $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar
       -files src/map.py,src/reduce.py
       -input pg*.txt -output wordCountTwoReducers 
       -mapper map.py -reducer reduce.py
@@ -281,7 +288,7 @@ Fix the reducer so that the result for 'far' is 3, while at the same time ensuri
 
 When this works we can now run the job on Hadoop using the combiner.  Run:
 
-     hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.4.jar
+     $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar
         -files src/map.py,src/reduce.py
         -input pg*.txt -output wordCountWithCombiner 
         -mapper map.py -reducer reduce.py -combiner reduce.py
