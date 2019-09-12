@@ -29,6 +29,25 @@ From the `hadoop` directory run the configuration script:
 
 This creates and formats the HDFS file system. This only needs to be run once; if you run this script again it will delete any existing data.
 
+## Start an interactive session
+
+Start an interactive session in a node. 
+This command requests one node from the y15 reservation for an hour.
+
+Modify the command below with your reservation number (RXXXXXX) and requested walltime.
+```
+qsub -IVl select=1:ncpus=36,walltime=01:00:00,place=scatter:excl -A y15 -q RXXXXXX -j oe
+```
+This will give you an interactive session into a node (e.g. node r1i1n20) and you will see something like this:
+
+```
+[USERNAME@cirrus-login0 ~]$ qsub -IVl select=1:ncpus=36,walltime=01:00:00,place=scatter:excl -A y15 -q R1112933 -j oe
+qsub: waiting for job 399686.indy2-login0 to start
+qsub: job 399686.indy2-login0 ready
+[USERNAME@r1i1n20 ~]$
+```
+You will need the name of the node assigned in the steps below.
+
 ## Start Hadoop HDFS and YARN
 
 Then start HDFS, YARN and the job history server:
