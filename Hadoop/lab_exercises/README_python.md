@@ -144,6 +144,9 @@ The Hadoop cluster used for this exercise consists of one node that you're going
 The data block size is 64MB which is well beyond the size of any of the files used in this exercise. 
 Each book will therefore be stored in a single data block. 
 
+Follow the instructions in [Setup Hadoop on Cirrus](../Setup-Hadoop-Cirrus.md) to start an interactive job
+on Cirrus and configure and start your own Hadoop cluster for this exercise.
+
 
 ## Hadoop distributed file system (HDFS)
 
