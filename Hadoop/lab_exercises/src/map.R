@@ -1,4 +1,4 @@
-#!/usr/bin/Rscript
+#!/lustre/sw/spack/opt/spack/linux-centos7-x86_64/gcc-6.2.0/r-3.4.0-dw24qnjrrczqrpdmr5tewwp6vpch5ydj/bin/Rscript
 
 # Map script for a simple Map/Reduce word count.
 #
