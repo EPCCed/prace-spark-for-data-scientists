@@ -17,7 +17,7 @@ Replace `<USERNAME>` by the name you have been given.
 Download the tutorial files using `git`:
 ```
 git clone https://github.com/EPCCed/prace-spark-for-data-scientists.git
-cd Hadoop/lab_exercises
+cd  prace-spark-for-data-scientists/Hadoop/lab_exercises
 ```
 
 The `data` directory will contain the data files needed for this project. 
@@ -79,7 +79,7 @@ You should notice that it has failed to produce the correct output in three plac
 
 *Hint*: in Python punctuation can be removed from a string by the following line 
 
-    myString = myString.translate(None,string.punctuation)
+    myString = myString.translate(str.maketrans('', '', string.punctuation))
 
 *Hint*: Python has a method called `lower()` that works on the string class to convert the string to lower case, e.g. `myString = myString.lower()`
 
@@ -103,11 +103,11 @@ Here you see the role of sorting in the Map/Reduce execution. On a large scale H
 A reduce function that counts the number of times each key occurs is coded in `src/reduce.py`. Look at this file and understand how it works.
 
 You can test the whole map/reduce pipeline by running:
- 
+
     cat data/StarWars.txt | src/map.py | sort | src/reduce.py
 
 Has the output successfully counted the occurrences of each word?
- 
+
 ## Testing on a sample of the book data
 
 Before running on the full book data sets we should test the scripts on a sample of the data. 
@@ -208,7 +208,7 @@ and
 
     Map input records=24633
     Map output records=226736
-   
+       
     Reduce input records=226736
     Reduce output records=12939
 
@@ -298,10 +298,10 @@ You should see in the report that the combiner has significantly reduced the num
 
     Map input records=24633
     Map output records=226736
-
+    
     Combine input records=226736
     Combine output records=24804
-
+    
     Reduce input records=24804
     Reduce output records=12939
 

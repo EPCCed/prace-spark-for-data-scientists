@@ -16,7 +16,8 @@ tar xzf hadoop-3.2.0.tar.gz
 Copy the configuration and start and stop scripts to your home directory.
 
 ```
-cp configure_hadoop.sh start_hadoop.sh stop_hadoop ~/hadoop/
+cd ~/prace-spark-for-data-scientists/Hadoop
+cp configure_hadoop.sh start_hadoop.sh stop_hadoop.sh test-map-reduce.sh ~/hadoop/
 ```
 
 ## Start an interactive session
@@ -94,7 +95,7 @@ This script creates a directory in HDFS, copies some files and runs a grep on th
 To shut down the history server, YARN and HDFS:
 
 ```
-./stop-hadoop.sh
+./stop_hadoop.sh
 ```
 
 ## Trouble shooting

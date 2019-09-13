@@ -15,5 +15,4 @@ for line in sys.stdin:
     words = line.split()
     for word in words:
         # tab-delimited; the trivial word count is 1
-        print '%s\t%s' % (word, 1)
-
+        print('{}\t{}'.format(word, 1))
