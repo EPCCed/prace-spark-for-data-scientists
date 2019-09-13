@@ -19,16 +19,6 @@ Copy the configuration and start and stop scripts to your home directory.
 cp configure_hadoop.sh start_hadoop.sh stop_hadoop ~/hadoop/
 ```
 
-## Configure Hadoop
-
-From the `hadoop` directory run the configuration script:
-
-```
-./configure_hadoop.sh
-```
-
-This creates and formats the HDFS file system. This only needs to be run once; if you run this script again it will delete any existing data.
-
 ## Start an interactive session
 
 Start an interactive session in a node. 
@@ -47,6 +37,16 @@ qsub: job 399686.indy2-login0 ready
 [USERNAME@r1i1n20 ~]$
 ```
 You will need the name of the node assigned in the steps below.
+
+## Configure Hadoop
+
+From the `hadoop` directory run the configuration script:
+
+```
+./configure_hadoop.sh
+```
+
+This creates and formats the HDFS file system. This only needs to be run once; if you run this script again it will delete any existing data.
 
 ## Start Hadoop HDFS and YARN
 
