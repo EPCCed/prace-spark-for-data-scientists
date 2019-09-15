@@ -28,11 +28,6 @@ We will use the Star Wars text for very simple testing and will run the full job
 You must ensure that the full path to the directory you use for this practical does NOT include any spaces.  
 Hadoop does not like files in directories with spaces and will produce errors.
 
-Load the module to use the Anaconda distribution of Python 3 on Cirrus:
-```
-module load anaconda/python3
-```
-
 ## Hadoop streaming
 
 For this tutorial we will use Hadoop streaming. 
@@ -79,7 +74,7 @@ You should notice that it has failed to produce the correct output in three plac
 
 *Hint*: in Python punctuation can be removed from a string by the following line 
 
-    myString = myString.translate(str.maketrans('', '', string.punctuation))
+    myString = myString.translate(None, string.punctuation)
 
 *Hint*: Python has a method called `lower()` that works on the string class to convert the string to lower case, e.g. `myString = myString.lower()`
 
@@ -155,22 +150,23 @@ Set the following environment variables:
 export HADOOP_DIR=$HOME/hadoop
 export HADOOP_HOME=$HADOOP_DIR/hadoop-3.2.0
 export HADOOP_CONF_DIR=$HADOOP_DIR/conf_dir
+export PATH=$PATH:$HADOOP_HOME/bin
 ```
 
 
 ## Hadoop distributed file system (HDFS)
 
 Before we can process any data in Hadoop we must first upload the data to HDFS. 
-To interact with the Hadoop file system you will need to use the `hadoop fs` command 
-(run `hadoop fs -help` for more details).
+To interact with the Hadoop file system you will need to use the `hdfs dfs` command 
+(run `hdfs dfs -help` for more details).
 
 To copy the book data files from the local filesystem to HDFS run:
 
-    hadoop fs -copyFromLocal data/pg*.txt .
+    hdfs dfs -copyFromLocal data/pg*.txt .
 
 After copying you can now list the files in your Hadoop file system:
 
-    hadoop fs -ls
+    hdfs dfs -ls
 
 You will see something like:
 
@@ -187,12 +183,12 @@ This is the replication index for the file it tells you how many copies of the f
 
 Finally, we can now run the job on Hadoop.  Run the following command on a single line:
 
-    $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar
-      -files src/map.py,src/reduce.py
-      -input pg*.txt -output wordCountResult 
+    $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar \
+      -files src/map.py,src/reduce.py \
+      -input pg*.txt -output wordCountResult \
       -mapper map.py -reducer reduce.py
 
-This will create a directory called `wordCountResult` on HDFS. Note that if this directory already exists the job will fail so if you run the program multiple times choose a different output directory or delete the directory before running the job (`hadoop fs -rm -r wordCountResult`).
+This will create a directory called `wordCountResult` on HDFS. Note that if this directory already exists the job will fail so if you run the program multiple times choose a different output directory or delete the directory before running the job (`hdfs dfs -rm -r wordCountResult`).
 
 If you see an error like that shown below then this will be because you have a space the path to your directory. Do not use directory name with spaces when using Hadoop.
 
@@ -238,10 +234,10 @@ Often you will wish to have more than one reducer so the reducer work can be dis
 
 Run the following command (on a single line) to execute the job with two reducers:
 
-    $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar
-      -files src/map.py,src/reduce.py
-      -input pg*.txt -output wordCountTwoReducers 
-      -mapper map.py -reducer reduce.py
+    $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar \
+      -files src/map.py,src/reduce.py \
+      -input pg*.txt -output wordCountTwoReducers \
+      -mapper map.py -reducer reduce.py \
       -numReduceTasks 2
 
 The output job details should now specify that two reducers were used:
@@ -289,9 +285,9 @@ Fix the reducer so that the result for 'far' is 3, while at the same time ensuri
 When this works we can now run the job on Hadoop using the combiner.  Run:
 
      $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar
-        -files src/map.py,src/reduce.py
-        -input pg*.txt -output wordCountWithCombiner 
-        -mapper map.py -reducer reduce.py -combiner reduce.py
+        -files src/map.py,src/reduce.py \
+        -input pg*.txt -output wordCountWithCombiner \ 
+        -mapper map.py -reducer reduce.py -combiner reduce.py \
         -numReduceTasks 2
 
 You should see in the report that the combiner has significantly reduced the number of input records to the reducer to about about 10% of the previous figure. This will result in considerably less data being transferred between nodes:

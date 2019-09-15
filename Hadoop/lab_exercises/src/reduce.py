@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/python
 
 # Reduce script for a simple Map/Reduce word count.
 #
