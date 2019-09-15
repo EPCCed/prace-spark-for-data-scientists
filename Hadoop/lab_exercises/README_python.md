@@ -210,7 +210,7 @@ and
 
 Now look at the files produced in the result directory using the command:
 
-    hadoop fs -ls wordCountResult/
+    hdfs dfs -ls wordCountResult/
 
 You will see something like:
 
@@ -221,11 +221,11 @@ Here the `_SUCCESS` file tells us the job completed successfully and the result 
 
 You can look at the contents of the file with a command like:
 
-    hadoop fs -cat wordCountResult/part-00000
+    hdfs dfs -cat wordCountResult/part-00000
 
 Or you can copy the file back to the local filesystem with:
 
-    hadoop fs -copyToLocal wordCountResult/part-00000 wordCountResult.data
+    hdfs dfs -copyToLocal wordCountResult/part-00000 wordCountResult.data
 
 
 ## Specifying more than one reducer
@@ -247,7 +247,7 @@ The output job details should now specify that two reducers were used:
 
 If you look at the output of this job you will now see two data files:
 
-    hadoop fs -ls wordCountTwoReducers
+    hdfs dfs -ls wordCountTwoReducers
 
 gives:
 
@@ -284,7 +284,7 @@ Fix the reducer so that the result for 'far' is 3, while at the same time ensuri
 
 When this works we can now run the job on Hadoop using the combiner.  Run:
 
-     $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar
+    $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar \
         -files src/map.py,src/reduce.py \
         -input pg*.txt -output wordCountWithCombiner \ 
         -mapper map.py -reducer reduce.py -combiner reduce.py \
