@@ -4,20 +4,28 @@ This document shows how to configure Hadoop on Cirrus.
 
 ## Download Hadoop
 
-On the login node, download and unpack Hadoop.
+On the login node, in your home directory clone this tutorial repository if you haven't done so already.
+```
+git clone https://github.com/EPCCed/prace-spark-for-data-scientists/
+```
+
+Now create a hadoop directory for all our tutorial files and the Hadoop installation.
 
 ```
 mkdir hadoop
 cd hadoop
-wget https://archive.apache.org/dist/hadoop/common/hadoop-3.2.0/hadoop-3.2.0.tar.gz
-tar xzf hadoop-3.2.0.tar.gz
 ```
 
-Copy the configuration and start and stop scripts to your home directory.
+Copy the Hadoop distribution and the configuration and start and stop scripts to your home directory.
+Unpack the Hadoop distribution.
 
 ```
 cd ~/prace-spark-for-data-scientists/Hadoop
 cp configure_hadoop.sh start_hadoop.sh stop_hadoop.sh test-map-reduce.sh ~/hadoop/
+cd ~/hadoop
+chmod u+x *sh
+cp /lustre/home/shared/hadoop/hadoop-3.2.0.tar.gz .
+tar xzf hadoop-3.2.0.tar.gz
 ```
 
 ## Start an interactive session
