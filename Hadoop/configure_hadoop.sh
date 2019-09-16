@@ -99,11 +99,11 @@ echo '    <value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOM
 echo "  </property>" >> mapred-site.xml
 echo "  <property>" >> mapred-site.xml
 echo "    <name>yarn.app.mapreduce.am.staging-dir</name>" >> mapred-site.xml
-echo "    <value>$HADOOP_DIR/tmp/hadoop-yarn</value>" >> mapred-site.xml
+echo "    <value>$HADOOP_HOME/tmp/hadoop-yarn</value>" >> mapred-site.xml
 echo "  </property>" >> mapred-site.xml
 echo "  <property>" >> mapred-site.xml
 echo "    <name>mapreduce.task.tmp.dir</name>" >> mapred-site.xml
-echo "    <value>$HADOOP_DIR/tmp</value>" >> mapred-site.xml
+echo "    <value>$HADOOP_HOME/tmp</value>" >> mapred-site.xml
 echo "  </property>" >> mapred-site.xml
 echo "</configuration>" >> mapred-site.xml
 
@@ -138,6 +138,10 @@ echo "  </property>" >> yarn-site.xml
 echo "  <property>" >> yarn-site.xml
 echo "    <name>yarn.log.server.url</name>" >> yarn-site.xml
 echo "    <value>http://$MASTER_HDFS:19888/jobhistory/logs</value>" >> yarn-site.xml
+echo "  </property>" >> yarn-site.xml
+echo "  <property>" >> yarn-site.xml
+echo "    <name>yarn.nodemanager.resource.cpu-vcores</name>" >> yarn-site.xml
+echo "    <value>$NCPUS</value>" >> yarn-site.xml
 echo "  </property>" >> yarn-site.xml
 echo "</configuration>" >> yarn-site.xml
 
