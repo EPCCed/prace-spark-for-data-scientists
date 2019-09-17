@@ -2,6 +2,12 @@
 
 This document shows how to configure Hadoop on Cirrus.
 
+Log into Cirrus:
+```
+ssh USER@login.cirrus.ac.uk
+```
+where USER is your username.
+
 ## Download Hadoop
 
 On the login node, in your home directory clone this tutorial repository if you haven't done so already.
