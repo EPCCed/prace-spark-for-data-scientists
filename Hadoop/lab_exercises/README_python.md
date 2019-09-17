@@ -3,20 +3,11 @@
 In this practical you will learn to execute a simple Hadoop Map/Reduce job, written as a Python script, on a Hadoop cluster. 
 We will use Hadoop to count the occurrences of words in four novels by Arthur Conan Doyle (obtained by Project Gutenberg).
 
-## Log in to Cirrus
+## Tutorial files
 
-You have received a login for the training:
-
+This assumes that you're logged into Cirrus.
+Have a look at the tutorial files:
 ```
-ssh <USERNAME>@login.cirrus.ac.uk
-```
-Replace `<USERNAME>` by the name you have been given.
-
-## Download the tutorial files
-
-Download the tutorial files using `git`:
-```
-git clone https://github.com/EPCCed/prace-spark-for-data-scientists.git
 cd  prace-spark-for-data-scientists/Hadoop/lab_exercises
 ```
 

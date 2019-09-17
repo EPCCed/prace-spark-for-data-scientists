@@ -3,10 +3,10 @@
 
 | Time | Session |
 | :--- | ------------- |
-| 13:00 | Introduction to Map Reduce |
-| 13:45 | Hadoop |
+| 13:00 | [Introduction to Map Reduce](prace_presentations/Hadoop-1.pdf) |
+| 13:45 | [Hadoop](prace_presentations/Hadoop-1.pdf)|
 | 14:30 | Coffee Break |
-| 15:00 | Hadoop Map Reduce practical |
+| 15:00 | [Hadoop Map Reduce practical](../Hadoop/Setup-Hadoop-Cirrus.md) |
 | 16:00 | Introduction to Hadoop YARN and Spark |
 | 17:00 | Wrapup & Questions |
 
