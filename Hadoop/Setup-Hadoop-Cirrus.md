@@ -16,15 +16,11 @@ mkdir hadoop
 cd hadoop
 ```
 
-Copy the Hadoop distribution and the configuration and start and stop scripts to your home directory.
+Copy the Hadoop distribution and the configuration and start and stop scripts to your `hadoop` directory.
 Unpack the Hadoop distribution.
 
 ```
-cd ~/prace-spark-for-data-scientists/Hadoop
-cp configure_hadoop.sh start_hadoop.sh stop_hadoop.sh test-map-reduce.sh ~/hadoop/
-cd ~/hadoop
-chmod u+x *sh
-cp /lustre/home/shared/hadoop/hadoop-3.2.0.tar.gz .
+cp /lustre/home/shared/hadoop/* .
 tar xzf hadoop-3.2.0.tar.gz
 ```
 
