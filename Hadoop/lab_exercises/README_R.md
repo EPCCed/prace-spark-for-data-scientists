@@ -150,9 +150,9 @@ This is very similar to what you would see on a Unix filesystem but notice the n
 
 Finally, we can now run the job on Hadoop.  Run the following command on a single line:
 
-    $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar
-      -files src/map.R,src/reduce.R
-      -input pg*.txt -output wordCountResult 
+    $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar \
+      -files src/map.R,src/reduce.R \
+      -input pg*.txt -output wordCountResult \
       -mapper map.R -reducer reduce.R
 
 This will create a directory called `wordCountResult` on HDFS. Note that if this directory already exists the job will fail so if you run the program multiple times choose a different output directory or delete the directory before running the job (`hadoop fs -rm -r wordCountResult`).
