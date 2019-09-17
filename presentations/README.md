@@ -15,12 +15,12 @@
 
 | Time | Session |
 | :--- | ------------- |
-| 09:00 | [Introduction to Spark](prace_presentations/Spark Introduction.pdf)|
+| 09:00 | [Introduction to Spark](prace_presentations/Spark%20Introduction.pdf)|
 | 09:30 | Practical: setup and walkthrough |
-| 10:00 | [Spark Essentials](prace_presentations/Spark Essentials.pdf)|
-| 10:30 | [Spark Data Frames](prace_presentations/Spark DataFrames.pdf) |
+| 10:00 | [Spark Essentials](prace_presentations/Spark%20Essentials.pdf)|
+| 10:30 | [Spark Data Frames](prace_presentations/Spark%20DataFrames.pdf) |
 | 10:45 | [lab exercises 1](../lab_exercises/lab1_basics.ipynb) |
-| 11:30 | [Spark Cluster](prace_presentations/Spark_Cluster.pdf) |
+| 11:30 | [Spark Cluster](prace_presentations/Spark%20Cluster.pdf) |
 | 11:45 | [Advanced Spark](Spark_Advanced.pdf) |
 | 12:00 | Lunch |
 | 13:00 | [lab exercises 2](../lab_exercises/lab2_1_dataframes.ipynb)  |
