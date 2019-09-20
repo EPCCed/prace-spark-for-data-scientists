@@ -1,29 +1,27 @@
 # Timetable
+
 ## Day 1
 
-| Time | Session |
-| :--- | ------------- |
-| 13:00 | [Introduction to Map Reduce](prace_presentations/Hadoop-1.pdf) |
-| 13:45 | [Hadoop](prace_presentations/Hadoop-2.pdf)|
-| 14:30 | Coffee Break |
-| 15:00 | [Hadoop Map Reduce practical](../Hadoop/Setup-Hadoop-Cirrus.md) |
-| 16:00 | [Introduction to Hadoop YARN and Spark](prace_presentations/Hadoop-3.pdf) |
-| 17:00 | Wrapup & Questions |
-
+10:00 Introduction & Welcome<br>
+10:10 [Introduction to Spark](Spark_Introduction.pdf)<br>
+10:30 [Spark Essentials](Spark_Essentials.pdf)<br>
+11:00 Coffee/Tea<br>
+11:30 Practical: setup and walkthrough<br>
+12:30 Lunch<br>
+13:30 Practical: setup and walkthrough<br>
+14:15 [Spark Cluster](Spark_Cluster.pdf)<br>
+15:00 Coffee/Tea<br>
+15:30 Practical: [lab exercises 1](../lab_exercises/lab1_basics.ipynb)<br>
+17:00 Close<br>
 
 ## Day 2
 
-| Time | Session |
-| :--- | ------------- |
-| 09:00 | [Introduction to Spark](prace_presentations/Spark%20Introduction.pdf)|
-| 09:30 | Practical: setup and walkthrough |
-| 10:00 | [Spark Essentials](prace_presentations/Spark%20Essentials.pdf)|
-| 10:30 | [Spark Data Frames](prace_presentations/Spark%20DataFrames.pdf) |
-| 10:45 | [lab exercises 1](../lab_exercises/lab1_basics.ipynb) |
-| 11:30 | [Spark Cluster](prace_presentations/Spark%20Cluster.pdf) |
-| 11:45 | [Advanced Spark](Spark_Advanced.pdf) |
-| 12:00 | Lunch |
-| 13:00 | [lab exercises 2](../lab_exercises/lab2_1_dataframes.ipynb)  |
-| 13:55 | Wrapup & Questions |
-| 14:00 | Coffee Break |
-
+10:00 [Spark Data Frames](Spark_DataFrames.pdf)<br>
+10:30 Practical: [lab exercises 2](../lab_exercises/lab2_1_dataframes.ipynb)<br>
+11:00 Coffee/Tea</br>
+11:30 [Advanced Spark](Spark_Advanced.pdf)</br>
+12:30 Lunch</br>
+13:30 Practical: lab exercises 3 or create your own Spark application</br>
+14:45 Present your application</br>
+15:15 Wrap-up</br>
+15:30 Close</br>
