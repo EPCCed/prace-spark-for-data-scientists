@@ -2,26 +2,30 @@
 
 ## Day 1
 
-10:00 Introduction & Welcome<br>
-10:10 [Introduction to Spark](Spark_Introduction.pdf)<br>
-10:30 [Spark Essentials](Spark_Essentials.pdf)<br>
-11:00 Coffee/Tea<br>
-11:30 Practical: setup and walkthrough<br>
-12:30 Lunch<br>
-13:30 Practical: setup and walkthrough<br>
-14:15 [Spark Cluster](Spark_Cluster.pdf)<br>
-15:00 Coffee/Tea<br>
-15:30 Practical: [lab exercises 1](../lab_exercises/lab1_basics.ipynb)<br>
-17:00 Close<br>
+| Time | Session |
+| :--- | ------------- |
+| 10:00 | Introduction & Welcome |
+| 10:10 | [Introduction to Spark](Spark_Introduction.pdf) |
+| 10:45 | Practical: setup and walkthrough |
+| 11:30 | Coffee/Tea |
+| 12:00 | [Spark Essentials](Spark_Essentials.pdf) |
+| 12:30 | Practical: setup and walkthrough |
+| 13:00 | Lunch |
+| 14:00 | [Spark Cluster](Spark_Cluster.pdf) |
+| 15:30 | Coffee/Tea |
+| 16:00 | Practical: [lab exercises 1](../lab_exercises/lab1_basics.ipynb) |
+| 17:30 Close<br>
 
 ## Day 2
 
-10:00 [Spark Data Frames](Spark_DataFrames.pdf)<br>
-10:30 Practical: [lab exercises 2](../lab_exercises/lab2_1_dataframes.ipynb)<br>
-11:00 Coffee/Tea</br>
-11:30 [Advanced Spark](Spark_Advanced.pdf)</br>
-12:30 Lunch</br>
-13:30 Practical: lab exercises 3 or create your own Spark application</br>
-14:45 Present your application</br>
-15:15 Wrap-up</br>
-15:30 Close</br>
+| Time | Session |
+| :--- | ------------- |
+| 10:00 | [Spark Data Frames](Spark_DataFrames.pdf) |
+| 10:30 | Practical: [lab exercises 2](../lab_exercises/lab2_1_dataframes.ipynb) |
+| 11:30 | Coffee/Tea |
+| 12:00 | [Advanced Spark](Spark_Advanced.pdf) |
+| 13:00 | Lunch |
+| 14:00 | Practical: lab exercises 3 or create your own Spark application |
+| 14:45 | Present your application |
+| 15:15 | Wrap-up | 
+| 15:30 | Close |
