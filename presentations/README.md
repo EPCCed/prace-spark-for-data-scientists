@@ -14,7 +14,7 @@
 | 14:00 | [Spark Cluster](Spark_Cluster.pdf) |
 | 15:30 | Coffee/Tea |
 | 16:00 | Practical: [lab exercises 1](../lab_exercises/lab1_basics.ipynb) |
-| 17:30 Close<br>
+| 17:30 | Close |
 
 ## Day 2
 
