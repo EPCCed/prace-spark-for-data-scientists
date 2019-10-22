@@ -9,7 +9,7 @@
 | 10:45 | Practical: setup and walkthrough (k-means) |
 | 11:30 | Coffee/Tea |
 | 12:00 | [Spark Essentials](Spark_Essentials.pdf) |
-| 12:30 | Practical: setup and [lab exercises 1] (../lab_exercises/lab1_basics.ipynb) together |
+| 12:30 | Practical: setup and walk through [lab exercises 1](../lab_exercises/lab1_basics.ipynb) together |
 | 13:00 | Lunch |
 | 14:00 | [Spark Cluster](Spark_Cluster.pdf) |
 | 14:30 | Practical: [Submit your own application](../Spark_Applications/) and [lab exercises 1](../lab_exercises/lab1_basics.ipynb) continued
