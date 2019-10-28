@@ -94,20 +94,20 @@ r1i1n20: stopping org.apache.spark.deploy.worker.Worker
 [USERNAME@r1i1n20 ~]$ exit
 ```
 ## Starting a Jupyter session connected with Pyspark: 
-7. Go to [walkthrough_examples/](walkthrough_examples/) and start the jupyter server:  
-   1. Modify the script `start_Jupyter_local.sh` with your MASTER node 
+7. Start the jupyter server:  
+   1. Run `start_Jupyter_local.sh` with your MASTER node as an argument
    (which is the node assigned to us in the interactive session, e.g. r1i1n20)  
    1. Then run the script:
       ```
-      ./start_Jupyter_local.sh
+      ./start_Jupyter_local.sh r1i1n20
       ```
       This will give you a token, which will be used in step 8, 
       like this one: http://0.0.0.0:8888/?token=2d5e554b2397355c334b8c3367503b06c4f6f95a26151795  
 
 8. Open another terminal and type the following command but replacing USER by your username on Cirrus, 
-   and MASTER NODE by the node that has been assigned to you in the interactive session. 
+   and MASTER NODE by the node that has been assigned to you in the interactive session (e.g. r1i1n20). 
    ```
-   ssh USER@login.cirrus.ac.uk -L8888:MASTER NODE:8888
+   ssh USER@login.cirrus.ac.uk -L8888:MASTER_NODE:8888
    ```
    In a web browser open http://localhost:8888/ -
    this will start a Jupyter session, where you will have to type the token 
@@ -119,7 +119,7 @@ r1i1n20: stopping org.apache.spark.deploy.worker.Worker
 9. Finally, Spark can be monitored via the master node's web UI. 
    1. Simply launch another terminal session and run something like
    ```
-   ssh USER@login.cirrus.ac.uk -L8080:MASTER NODE:8080
+   ssh USER@login.cirrus.ac.uk -L8080:MASTER_NODE:8080
    ```
    2. Point your web browser to http://localhost:8080/
 
@@ -165,6 +165,6 @@ r1i1n20: stopping org.apache.spark.deploy.worker.Worker
 
 **Note:** You can use a single command to tunnel all the ports for the Spark UI
 ```
-ssh -L8888: MASTER NODE:8888 -L8080: MASTER NODE:8080 -L4040: MASTER NODE:4040 USER@login.cirrus.ac.uk
+ssh -L8888: MASTER NODE:8888 -L8080: MASTER_NODE:8080 -L4040: MASTER NODE:4040 USER@login.cirrus.ac.uk
 ```
 
