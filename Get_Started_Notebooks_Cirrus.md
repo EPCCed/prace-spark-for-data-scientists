@@ -40,14 +40,12 @@ But first we need to do some steps for:
 5. Start an interactive session in a node, using the `start_interactive` script. 
    This script requests by default one node from the y15 reservation for an hour.
 
-   Modify `./start_interactive.sh` with your reservation number (RXXXXXX) and walltime.
-   ```
-   qsub -IVl select=1:ncpus=36,walltime=01:00:00,place=scatter:excl -A y15 -q RXXXXXX -j oe
-   ```
+   Modify `./start_interactive.sh R1197436` with your reservation number (in this example R1197436) and walltime.
+   
    This will give you an interactive session into a node (e.g. node r1i1n20) and you will see something like this:
     
    ```
-   [USERNAME@cirrus-login0 ~]$ ./start_interactive.sh
+   [USERNAME@cirrus-login0 ~]$ ./start_interactive.sh R1197436
    qsub: waiting for job 399686.indy2-login0 to start
    qsub: job 399686.indy2-login0 ready
    [USERNAME@r1i1n20 ~]$
