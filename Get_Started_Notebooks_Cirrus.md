@@ -40,7 +40,15 @@ But first we need to do some steps for:
 5. Start an interactive session in a node, using the `start_interactive` script. 
    This script requests by default one node from the y15 reservation for an hour.
 
-   Modify `./start_interactive.sh R1197436` with your reservation number (in this example R1197436) and walltime.
+   Run `./start_interactive.sh R1197436` with your reservation number (in this example R1197436)
+   
+   If you want to change the resevation time, modify the script by changing the walltime.
+
+    ```
+     #!/bin/bash --login
+     qsub -IVl select=1:ncpus=36,walltime=01:00:00,place=scatter:excl -A y15 -j oe -q $1
+    ```
+
    
    This will give you an interactive session into a node (e.g. node r1i1n20) and you will see something like this:
     
