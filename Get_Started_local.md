@@ -119,8 +119,11 @@ This opens a PySpark Jupyter session in a Firefox browser.
 
 A copy of the git repository is available in the Docker container.
 
-After starting the container with the command above, you are logged in to the running container. Now start a PySpark session in this container:
+The command above starts a bash terminal session in the Docker container. You can now start Jupyter:
 
 ```
+cd prace-spark-for-data-scientists/docker
 ./pyspark_jupyter.sh
 ```
+
+and access it from a browser (on the host machine i.e. your laptop) here: http://localhost:8000/
