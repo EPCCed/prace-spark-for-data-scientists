@@ -111,7 +111,7 @@ This opens a PySpark Jupyter session in a Firefox browser.
 1. Change into the docker directory within the cloned repository and follow the [instructions](docker/) to build and run the Dockerfile.
       ```
       cd prace-spark-for-data-scientists/docker
-      docker build -t prace_spark_course
+      docker build -t prace_spark_course .
       ./start_docker.sh
       ```
 
@@ -119,7 +119,7 @@ This opens a PySpark Jupyter session in a Firefox browser.
 
 A copy of the git repository is available in the Docker container.
 
-In the Docker container start a PySpark session:
+After starting the container with the command above, you are logged in to the running container. Now start a PySpark session in this container:
 
 ```
 ./pyspark_jupyter.sh
