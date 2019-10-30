@@ -38,7 +38,7 @@ But first we need to do some steps for:
 ## Starting an interactive session:
 
 5. Start an interactive session in a node, using the `start_interactive` script. 
-   This script requests by default one node from the y15 reservation for an hour.
+   This script requests by default one node from the y15 reservation for five hours.
    The reservation numbers are:
    
     * Day 1: R1170764
@@ -50,7 +50,7 @@ But first we need to do some steps for:
 
     ```
      #!/bin/bash --login
-     qsub -IVl select=1:ncpus=36,walltime=01:00:00,place=scatter:excl -A y15 -j oe -q $1
+     qsub -IVl select=1:ncpus=36,walltime=05:00:00,place=scatter:excl -A y15 -j oe -q $1
     ```
    
    This will give you an interactive session into a node (e.g. node r1i1n20) and you will see something like this:
