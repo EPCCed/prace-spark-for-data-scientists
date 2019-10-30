@@ -13,6 +13,7 @@ This starts a bash commandline session.
 
 From within the container, start PySpark with a Jupyter notebook:
 ```
+cd prace-spark-for-data-scientists/docker
 ./pyspark_jupyter.sh
 ```
 
