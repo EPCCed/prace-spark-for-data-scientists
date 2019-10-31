@@ -29,6 +29,7 @@
 | 12:00 | Walkthrough: [MLlib k-means](../walkthrough_examples/ML_KMeans.ipynb) |
 | 12:10 | Practical: Pick one of the lab exercises 3 ([Numpy](../lab3_1_NumpyAlgebra.ipynb), [MLlib](../lab3_2_MLlib.ipynb), [Logistic Regression](../lab3_3_LogisticRegression.ipynb)) or create your own Spark application |
 | 13:00 | Lunch |
-| 14:00 | Practical continued |
+| 14:00 | Example application: [Analysing Volcanic Ash Advisories](../lab_exercises/Volcano_Analysis/Volcanic_Ash_Use_Case.pdf) |
+| 14:15 | Practical continued |
 | 14:45 | Wrap-up | 
 | 15:00 | Close |
