@@ -6,7 +6,7 @@
 | :--- | ------------- |
 | 10:00 | Introduction & Welcome |
 | 10:10 | [Introduction to Spark](Spark_Introduction.pdf) |
-| 10:45 | Practical: setup and walkthrough (k-means) |
+| 10:45 | Practical: setup and walkthrough |
 | 11:30 | Coffee/Tea |
 | 12:00 | [Spark Essentials](Spark_Essentials.pdf) |
 | 12:30 | Practical: setup and walk through [lab exercises 1](../lab_exercises/lab1_basics.ipynb) together |
