@@ -26,7 +26,7 @@
 | 10:00 | [Advanced Spark](Spark_Advanced.pdf) |
 | 10:30 | Practical: [lab exercises 2.2](../lab_exercises/lab2_2_dataframes_join.ipynb)  |
 | 11:30 | Coffee/Tea |
-| 12:00 | Walkthrough: [MLlib k-means](../lab_exercises/ML_KMeans.ipynb) |
+| 12:00 | Walkthrough: [MLlib k-means](../walkthrough_examples/ML_KMeans.ipynb) |
 | 12:10 | Practical: Pick one of the lab exercises 3 ([Numpy](../lab3_1_NumpyAlgebra.ipynb), [MLlib](../lab3_2_MLlib.ipynb), [Logistic Regression](../lab3_3_LogisticRegression.ipynb)) or create your own Spark application |
 | 13:00 | Lunch |
 | 14:00 | Practical continued |
