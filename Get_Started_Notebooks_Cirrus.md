@@ -44,7 +44,7 @@ But first we need to do some steps for:
     * Day 1: R1170764
     * Day 2: R1170765
 
-   Run `./start_interactive.sh R1170764` with your reservation number (in this example R1170764).
+   Run `./start_interactive.sh R1170765` with your reservation number (in this example R1170764).
    
    If you want to change the time of your interactive session, modify the script by changing the walltime.
 
