@@ -22,28 +22,29 @@ On Windows, especially if you do not have Java and Python, it is easier to use t
 1. Get the latest release from the [Apache Spark downloads page](https://spark.apache.org/downloads.html) and unpack it.
 1. That's it - check that it works:
       ```
-      cd spark-2.4.2-bin-hadoop2.7/
+      cd spark-2.4.4-bin-hadoop2.7/
       bin/pyspark
       ```
 
       You should see output like this:
 
       ```
-      Python 3.6.3 |Anaconda custom (64-bit)| (default, Oct  6 2017, 12:04:38) 
-      [GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)] on darwin
+      $ bin/pyspark 
+      Python 3.7.4 (default, Aug 13 2019, 15:17:50) 
+      [Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
       Type "help", "copyright", "credits" or "license" for more information.
-      2019-01-09 10:56:19 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+      19/11/01 09:11:45 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+      Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
       Setting default log level to "WARN".
       To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
-      2019-01-09 10:56:21 WARN  Utils:66 - Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
       Welcome to
             ____              __
            / __/__  ___ _____/ /__
           _\ \/ _ \/ _ `/ __/  '_/
-         /__ / .__/\_,_/_/ /_/\_\   version 2.4.2
+         /__ / .__/\_,_/_/ /_/\_\   version 2.4.4
             /_/
 
-      Using Python version 3.6.3 (default, Oct  6 2017 12:04:38)
+      Using Python version 3.7.4 (default, Aug 13 2019 15:17:50)
       SparkSession available as 'spark'.
       >>> 
       ```
@@ -57,7 +58,11 @@ On Windows, especially if you do not have Java and Python, it is easier to use t
 1. We're setting up an environment variable for the Spark installation directory
 (replace **[INSTALLATION_PATH]** below with the path of your installation):
       ```
-      export SPARK_HOME=<b>[INSTALLATION_PATH]</b>/spark-2.4.2-bin-hadoop2.7/
+      export SPARK_HOME=[INSTALLATION_PATH]/spark-2.4.4-bin-hadoop2.7/
+      ```
+      You can also add PySpark (and other Spark binaries) to your path if you prefer:
+      ```
+      export PATH=$PATH:$SPARK_HOME/bin
       ```
 1. Configure the environment for PySpark to use Jupyter notebooks:
       ```
