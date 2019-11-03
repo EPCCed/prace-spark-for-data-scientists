@@ -9,11 +9,14 @@ When the image has been built succesfully, run an interactive container:
 ```
 ./start_docker.sh
 ```
-This starts a bash commandline session.
+This starts a bash commandline session from a Linux or MacOS terminal.
+Or, if you are using a Windows PowerShell, use the following command to start an interactive session on the docker container:
+```
+docker run -it -p 8000:8000 prace_spark_course /bin/bash
+```
 
 From within the container, start PySpark with a Jupyter notebook:
 ```
-cd prace-spark-for-data-scientists/docker
 ./pyspark_jupyter.sh
 ```
 
